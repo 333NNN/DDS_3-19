@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const ListRender = () => {
-  const [lista] = useState(["Franquilei", "Kevin", "Natã", "Renan", "Gregory"]);
+  const [lista, setLista] = useState([1, 2, 3, 4, 5]);
 
   const [users] = useState([
     {
@@ -30,14 +30,19 @@ const ListRender = () => {
           <li key={index}>{item}</li>
         ))}
       </ul>
+      <button onClick={() => setLista([...lista, lista.length + 1])}>
+        Add
+      </button>
       <hr />
       {/* //Lista com id de chave */}
-      
-        {users.map((user) => (
-          // console.log(user);
-          <h2 key={user.id}> O nome é {user.name}, e seu número é {user.number}</h2>
-        ))}
-      
+
+      {users.map((user) => (
+        // console.log(user);
+        <h2 key={user.id}>
+          {" "}
+          O nome é {user.name}, e seu número é {user.number}
+        </h2>
+      ))}
     </div>
   );
 };
