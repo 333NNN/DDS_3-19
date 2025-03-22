@@ -3,14 +3,14 @@ import React from "react";
 const TemplateExpressions = () => {
   
   let aluno = {
-    nome: "",
-    turma: "",
-    curso: "",
+    nome: "Natã",
+    turma: "19",
+    curso: "DDS",
   };
 
-  aluno.nome = prompt("Insira seu nome: ");
-  aluno.curso = prompt("Insira seu curso: ");
-  aluno.turma = prompt("Insira sua turma: ");
+  // aluno.nome = prompt("Insira seu nome: ");
+  // aluno.curso = prompt("Insira seu curso: ");
+  // aluno.turma = prompt("Insira sua turma: ");
 
   return (
     <div>
