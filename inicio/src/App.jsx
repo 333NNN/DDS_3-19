@@ -4,6 +4,7 @@ import ListRender from "./components/ListRender.jsx";
 import Motivacao from "./components/Motivacao.jsx";
 import TemplateExpressions from "./components/TemplateExpressions.jsx";
 import Varia from "./components/Varia.jsx";
+import Events from "./components/Events.jsx";
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
       {/* <FirstComponent />
       <Motivacao />
       <TemplateExpressions />
+      
       <Varia /> */}
+      <Events />
       <ListRender />
     </>
   );
