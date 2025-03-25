@@ -26,15 +26,14 @@ function App() {
       <hr />
       <Time nome="Vasco de Gama" estado="RJ" posicao={0} campeao={false} /> */}
 
-        {
-          cantores.map((cantor) => (
-          <Cantores key={cantor.id} 
-          name={cantor.name} 
-          estiloMusical={cantor.estiloMusical} 
-          premiado={cantor.premiado}/>
-          ))
-        }
-      
+      {cantores.map((cantor) => (
+        <Cantores
+          key={cantor.id}
+          name={cantor.name}
+          estiloMusical={cantor.estiloMusical}
+          premiado={cantor.premiado}
+        />
+      ))}
     </>
   );
 }
