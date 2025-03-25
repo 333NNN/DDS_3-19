@@ -5,6 +5,9 @@ import Time from "./components/Time.jsx";
 import Cantores from "./components/Cantores.jsx";
 
 function App() {
+  const nnn = 10;
+  const titulo = true;
+
   const nome = "Natã";
   const [name] = useState("Nate");
 
@@ -26,14 +29,38 @@ function App() {
       <hr />
       <Time nome="Vasco de Gama" estado="RJ" posicao={0} campeao={false} /> */}
 
-      {cantores.map((cantor) => (
+      {/*renderização de lista e passagem de props p/ components*/}
+      {/* {cantores.map((cantor) => (
         <Cantores
           key={cantor.id}
           name={cantor.name}
           estiloMusical={cantor.estiloMusical}
           premiado={cantor.premiado}
         />
-      ))}
+      ))} */}
+
+      <h2
+        style={
+          nnn > 5
+            ? { color: "green", backgroundColor: "yellow", fontSize: "30px" }
+            : { color: "red", backgroundColor: "blue", fontSize: "30px" }
+        }
+      >
+        ESTE É UM CSS É DINÂMICO
+      </h2>
+      <h2
+        style={
+          nnn < 5
+            ? { color: "green", backgroundColor: "yellow", fontSize: "30px" }
+            : { color: "red", backgroundColor: "blue", fontSize: "30px" }
+        }
+      >
+        ESTE CSS TAMBÉM É DINÂMICO
+      </h2>
+
+      <h1 className={titulo ? "titulo-incrivel" : "texto-paia"}>
+        Título incrível para teste
+      </h1>
     </>
   );
 }
