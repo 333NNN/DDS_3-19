@@ -1,7 +1,11 @@
-import React from "react";
+import { Navigate } from "react-router-dom";
 
 const Home = () => {
-  return <div>Home</div>;
+  const isAuth = true;
+
+  return (
+    <div>{isAuth ? <Navigate to="/" /> : <Navigate to="/login" />} Home</div>
+  );
 };
 
 export default Home;

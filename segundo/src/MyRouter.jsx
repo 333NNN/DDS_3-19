@@ -5,7 +5,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Sobre from "./pages/Sobre";
 import Cadastro from "./pages/Cadastro";
-import Contato from "./pages/Contato.jsx"
+import Contato from "./pages/Contato.jsx";
+import InfoCard from "./components/InfoCard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/cadastro",
         element: <Cadastro />,
+      },
+      {
+        path: "/informacao/:id",
+        element: <InfoCard />,
       },
     ],
   },
