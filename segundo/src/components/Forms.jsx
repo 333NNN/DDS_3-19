@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./css/Forms.module.css";
 import { useState } from "react";
 
-const Forms = () => {
-  const [nome, setNome] = useState();
+const Forms = (props) => {
+  const [nome, setNome] = useState(props ? props.nome : "");
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
 
@@ -22,7 +22,7 @@ const Forms = () => {
 
   return (
     <div>
-      <h4>Forms</h4>
+      <h4>Cadastrar</h4>
       <form className={styles.formulario} onSubmit={handleSubmit}>
         <label htmlFor="nome">
           Nome:
@@ -31,6 +31,7 @@ const Forms = () => {
             id="nome"
             placeholder="Digite seu nome"
             onChange={handleName}
+            value={nome}
           />
         </label>
 
@@ -42,6 +43,7 @@ const Forms = () => {
             onChange={(e) => {
               setEmail(e.target.value);
             }}
+            value={email}
           />
         </label>
 
@@ -55,6 +57,7 @@ const Forms = () => {
             onChange={(e) => {
               setSenha(e.target.value);
             }}
+            value={senha}
           />
         </label>
 
