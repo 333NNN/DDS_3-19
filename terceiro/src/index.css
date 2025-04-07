@@ -68,6 +68,6 @@ button:focus-visible {
 }
 .active{
   background-color: orange;
-  padding: 10px 20px;
+  padding: 12px 20px;
   color: black;
 }
