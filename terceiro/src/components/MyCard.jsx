@@ -8,7 +8,7 @@ const MyCard = (props) => {
       <Card.Body>
         <Card.Title>{props.titulo}</Card.Title>
         <Card.Text>{props.desc}</Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="danger">𝔊𝔬 𝔰𝔬𝔪𝔢𝔴𝔥𝔢𝔯𝔢</Button>
       </Card.Body>
     </Card>
   );
