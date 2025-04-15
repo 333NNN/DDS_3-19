@@ -3,7 +3,7 @@ import Table from "react-bootstrap/Table";
 
 const Tabela = () => {
   return (
-    <div  style={{ width: "90%", margin: "auto" }}>
+    <div style={{ width: "90%", margin: "auto" }}>
       <h1>Tabela</h1>
       <Table striped bordered hover>
         <thead>
