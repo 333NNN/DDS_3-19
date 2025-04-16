@@ -27,6 +27,13 @@
       "email": "peter.tosh@user.com",
       "senha": "555",
       "tipo": "Gerente"
+    },
+    {
+      "id": "a61b",
+      "nome": "Fulano",
+      "email": "fulano@user.com",
+      "senha": "pirulito",
+      "tipo": "Funcionário"
     }
   ]
 }
