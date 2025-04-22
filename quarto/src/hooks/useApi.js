@@ -51,4 +51,5 @@ export function deletarFuncionario(id) {
       console.log("Erro ao deletar funcionário:", error);
     }
   }
+  fetchData();
 }
