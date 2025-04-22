@@ -38,3 +38,13 @@ export function addFuncionario(funcionario) {
   }
   fetchData();
 }
+
+export function deletarFuncionario(id){
+  async function fetchData() {
+    try {
+      
+    } catch (error) {
+      
+    }
+  }
+}

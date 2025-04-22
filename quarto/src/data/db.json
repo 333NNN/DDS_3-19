@@ -34,6 +34,20 @@
       "email": "fulano@user.com",
       "senha": "pirulito",
       "tipo": "Funcionário"
+    },
+    {
+      "id": "58c6",
+      "nome": "Lahra",
+      "email": "lahra.user@example.com",
+      "senha": "lahra123",
+      "tipo": "Funcionário"
+    },
+    {
+      "id": "3ed7",
+      "nome": "Ramon Valdez",
+      "email": "r.valdez@user.com",
+      "senha": "chavito666",
+      "tipo": "Gerente"
     }
   ]
 }

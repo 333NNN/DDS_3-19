@@ -2,6 +2,7 @@
 import Table from "react-bootstrap/Table";
 
 import { getFuncionarios } from "../hooks/useApi.js";
+import { Button } from "bootstrap";
 
 const Tabela = () => {
   const funcionarios = getFuncionarios();
@@ -10,6 +11,16 @@ const Tabela = () => {
   return (
     <div style={{ width: "90%", margin: "auto" }}>
       <h1>Tabela</h1>
+
+      {/* <Button
+        variant="primary"
+        onClick={() => {
+          window.location.reload();
+        }}
+      >
+        {" "}
+        Recarregar{" "}
+      </Button> */}
       <Table striped bordered hover>
         <thead>
           <tr>
