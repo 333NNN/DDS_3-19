@@ -29,18 +29,12 @@
       "tipo": "Gerente"
     },
     {
-      "id": "a61b",
-      "nome": "Fulano",
-      "email": "fulano@user.com",
-      "senha": "pirulito",
-      "tipo": "Funcionário"
-    },
-    {
-      "id": "58c6",
-      "nome": "Lahra",
-      "email": "lahra.user@example.com",
-      "senha": "lahra123",
-      "tipo": "Funcionário"
+      "Id": "",
+      "nome": "motoboy",
+      "email": "user@nextmail.com",
+      "senha": "12345678",
+      "tipo": "Funcionário",
+      "id": "58c6"
     },
     {
       "id": "3ed7",

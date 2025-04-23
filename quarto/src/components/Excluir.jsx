@@ -22,7 +22,9 @@ const Excluir = () => {
   // Função chamada quando o formulário é enviado com sucesso
   const onSubmit = (data) => {
     console.log("Dados:", data);
-    deletarFuncionario(data);
+    deletarFuncionario(data.id);
+    alert("Funcionário excluído com sucesso!");
+    window.location.reload();
   };
 
   // Função chamada quando há erros no envio do formulário

@@ -5,6 +5,7 @@ import Col from "react-bootstrap/esm/Col";
 import Cadastro from "../components/Cadastro";
 import Tabela from "../components/Tabela";
 import Excluir from "../components/Excluir";
+import Editar from "../components/Editar";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <Col xs={6} style={{ backgroundColor: "#eee" }}>
           <Cadastro />
           <Excluir />
+          <Editar />
         </Col>
         <Col xs={6} style={{ backgroundColor: "#eef" }}>
           <Tabela />

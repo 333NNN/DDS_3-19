@@ -53,3 +53,22 @@ export function deletarFuncionario(id) {
   }
   fetchData();
 }
+
+export function editFuncionario(funcionario) {
+  async function fetchData() {
+    try {
+      const response = await fetch(`${url}/${funcionario.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(funcionario)
+      });
+      const data = await response.json();
+      console.log("Usuário editado com sucesso", data);
+    } catch (error) {
+      console.log("Erro ao editar funcionário", error);
+    }
+  }
+  fetchData();
+}
