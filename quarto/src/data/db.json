@@ -23,24 +23,23 @@
     },
     {
       "id": "4",
-      "nome": "Peter",
-      "email": "peter.tosh@user.com",
-      "senha": "555",
-      "tipo": "Gerente"
-    },
-    {
-      "Id": "",
-      "nome": "motoboy",
-      "email": "user@nextmail.com",
+      "nome": "Pedro",
+      "email": "pedro.toxico@maconha.com",
       "senha": "12345678",
-      "tipo": "Funcionário",
-      "id": "58c6"
+      "tipo": "Funcionário"
     },
     {
       "id": "3ed7",
       "nome": "Ramon Valdez",
       "email": "r.valdez@user.com",
       "senha": "chavito666",
+      "tipo": "Gerente"
+    },
+    {
+      "id": "7bac",
+      "nome": "Civil",
+      "email": "civilwar9@gruesome.com",
+      "senha": "pirulito",
       "tipo": "Gerente"
     }
   ]
