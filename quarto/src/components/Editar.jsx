@@ -51,7 +51,7 @@ const Editar = () => {
             {...register("id", {
               required: "O id é obrigatório",
               minLength: {
-                value: 2,
+                value: 1,
                 message: "O Id deve ter pelo menos 1 caracteres",
               },
             })}
