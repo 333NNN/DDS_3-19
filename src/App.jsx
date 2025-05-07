@@ -4,17 +4,20 @@ import Container from "react-bootstrap/Container";
 import "./App.css";
 import { Outlet } from "react-router-dom";
 import Home from "./pages/Home";
-import NavBar from "./components/BarraNav";
+import BarraNav from "./components/BarraNav";
+import { AuthProvider } from "./contexts/UserContext";
 
 function App() {
   return (
     <>
-      <div className="App">
-        <NavBar />
-        <Container>
-          <Outlet />
-        </Container>
-      </div>
+      <AuthProvider>
+        <div className="App">
+          <BarraNav />
+          <Container>
+            <Outlet />
+          </Container>
+        </div>
+      </AuthProvider>
     </>
   );
 }

@@ -4,16 +4,18 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { HiMiniShoppingBag } from "react-icons/hi2";
 import Button from "react-bootstrap/Button";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/UserContext";
 
 const BarraNav = () => {
-  const usuarioNome = "Visitante";
+  const { usuarioNome, logout } = useContext(AuthContext);
 
   return (
     <div>
       <Navbar expand="lg" bg="success" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="/home">
-            <HiMiniShoppingBag size="1.5rem" className="me-2" />
+            <HiMiniShoppingBag size="1.5rem" className="me-2 mb-2" />
             NNN Market
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="minha-nav" />
@@ -36,7 +38,7 @@ const BarraNav = () => {
                 </>
               ) : (
                 <>
-                  <Button variant="danger" href="/login">
+                  <Button variant="danger" href="/login" onClick={logout}>
                     Sair
                   </Button>
                 </>

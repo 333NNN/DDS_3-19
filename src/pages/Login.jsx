@@ -5,8 +5,42 @@ import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 import { LuArrowRightToLine } from "react-icons/lu";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { useVerificaLogin } from "../hooks/useApi";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const { verificaLogin } = useVerificaLogin();
+
+  const navigate = useNavigate();
+
+  const onSubmit = (data) => {
+    console.log("Dados", data);
+    const respostaVerificacao = verificaLogin(data);
+
+    if (respostaVerificacao === "Login efetuado com sucesso") {
+      alert(respostaVerificacao);
+      navigate("/home");
+    } else {
+      setAlertClass("mb-5 mt-2");
+      setAlertMensagem(respostaVerificacao);
+    }
+  };
+
+  const onError = (errors) => {
+    console.log("Erros", errors);
+  };
+
+  const [alertClass, setAlertClass] = useState("mb-5 d-none");
+
+  const [alertMensagem, setAlertMensagem] = useState("");
+
   return (
     <div>
       <Container
@@ -21,28 +55,50 @@ const Login = () => {
             width: "100%",
           }}
         />
-        <Form style={{ width: "75%", margin: "auto", textAlign: "center" }}>
+        <Form
+          style={{ width: "75%", margin: "auto", textAlign: "center" }}
+          onSubmit={handleSubmit(onSubmit, onError)}
+        >
+          {/* Email */}
           <FloatingLabel
             controlId="floatingInput"
             label="Email"
             className="mb-5"
           >
-            <Form.Control type="email" placeholder="email"></Form.Control>
+            <Form.Control
+              type="email"
+              placeholder="email"
+              {...register("email", {
+                required: "O email é obrigatório",
+                pattern: {
+                  value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
+                  message: "Email inválido",
+                },
+                validate: (value) => value.includes("@") || "Email inválido",
+              })}
+            ></Form.Control>
+            {errors.email && <p className="error">{errors.email.message}</p>}
           </FloatingLabel>
 
+          {/* Senha */}
           <FloatingLabel
             controlId="floatingInputPassword"
             label="Senha"
             className="mb-5"
           >
-            <Form.Control type="password" placeholder="Senha"></Form.Control>
+            <Form.Control
+              type="password"
+              placeholder="Senha"
+              {...register("senha", { required: "A senha é obrigatória" })}
+            ></Form.Control>
+            {errors.senha && <p className="error">{errors.senha.message}</p>}
           </FloatingLabel>
           <Button variant="primary" type="submit" className="mb-5" size="lg">
             Login
           </Button>
           <Alert
             variant="danger"
-            className="mb-5"
+            className={alertClass}
             style={{
               position: "absolute",
               width: "30%",
@@ -50,7 +106,7 @@ const Login = () => {
               top: "90%",
             }}
           >
-            Sim
+            {alertMensagem}
           </Alert>
         </Form>
       </Container>

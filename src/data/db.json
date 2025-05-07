@@ -1,1 +1,24 @@
-{}
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Natão",
+      "email": "natao@user.com",
+      "senha": "123"
+    },
+    {
+      "id": "2",
+      "nome": "Claudio",
+      "email": "claudio@user.com",
+      "senha": "321"
+    },
+    {
+      "id": "3",
+      "nome": "Santana",
+      "email": "santana@user.com",
+      "senha": "111"
+    }
+  ],
+  "produtos": [],
+  "categorias": []
+}
