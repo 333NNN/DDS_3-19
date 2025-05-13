@@ -36,3 +36,32 @@ export function useVerificaLogin() {
   };
   return { verificaLogin };
 }
+
+export function useListaProdutos() {
+  const [produtos, setProdutos] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const req = await fetch(`${url}/produtos`);
+        const produtos = await req.json();
+        setProdutos(produtos);
+      } catch (error) {
+        console.log(object);
+      }
+    }
+    fetchData();
+  }, []);
+  return produtos;
+}
+
+export function useDeleteProduto() {
+  const deletarProduto = async (idProduto) => {
+    const req = await fetch(`${url}/produtos/${idProduto}`, {
+      method: "DELETE",
+    });
+    const res = await req.json();
+    console.log("Produto deletado: ", res);
+    return res;
+  };
+  return { deletarProduto };
+}

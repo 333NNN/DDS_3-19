@@ -5,11 +5,19 @@ import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 import { LuArrowRightToLine } from "react-icons/lu";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useVerificaLogin } from "../hooks/useApi";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/UserContext";
 
 const Login = () => {
+  const { logout } = useContext(AuthContext);
+
+  useEffect(() => {
+    logout();
+  }, []);
+  
   const {
     register,
     handleSubmit,

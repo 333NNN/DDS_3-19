@@ -1,9 +1,10 @@
-import React from 'react'
+import { AuthContext } from "../contexts/UserContext";
+import { Navigate } from "react-router-dom";
 
 const EditarProdutos = () => {
-  return (
-    <div>EditarProdutos</div>
-  )
-}
+  const { usuarioNome } = useContext(AuthContext);
+  if (usuarioNome === "Visitante") return <Navigate to="/login" />;
+  return <div>EditarProdutos</div>;
+};
 
-export default EditarProdutos
+export default EditarProdutos;

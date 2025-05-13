@@ -19,6 +19,43 @@
       "senha": "111"
     }
   ],
-  "produtos": [],
+  "produtos": [
+    {
+      "key": 1,
+      "id": "1",
+      "nome": "Shampoo",
+      "descricao": "shampoo xerôso e goxtoso",
+      "preco": "30,00",
+      "categoria": "Saúde e Higiene",
+      "imagemUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZvF6QPgmLIeaL8qCuHa-XduZBEuQPs4LsfQ&s"
+    },
+    {
+      "key": 2,
+      "id": "2",
+      "nome": "Arroz Tipo 1, 1kg",
+      "descricao": "Arroz branco tipo 1, embalagem com 1kg.",
+      "preco": "9,89",
+      "categoria": "Alimentos",
+      "imagemUrl": "https://ibassets.com.br/ib.item.image.large/l-dbde13ad73004e66a02c0b631d3c30fc.jpeg"
+    },
+    {
+      "key": 3,
+      "id": "3",
+      "nome": "Detergente Neutro 500ml",
+      "descricao": "Detergente líquido neutro para limpeza geral.",
+      "preco": "2,49",
+      "categoria": "Limpeza",
+      "imagemUrl": "null"
+    },
+    {
+      "key": 5,
+      "id": "5",
+      "nome": "Óleo de Soja 900ml",
+      "descricao": "Óleo de soja refinado, ideal para cozinhar.",
+      "preco": "6,49",
+      "categoria": "Alimentos",
+      "imagemUrl": "null"
+    }
+  ],
   "categorias": []
 }
