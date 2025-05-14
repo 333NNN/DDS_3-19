@@ -55,7 +55,28 @@
       "preco": "6,49",
       "categoria": "Alimentos",
       "imagemUrl": "null"
+    },
+    {
+      "nome": "Feijão",
+      "descricao": "Feijão carioquinha gostosim",
+      "categoria": "Alimentos",
+      "preco": "9.6",
+      "imagemUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIj99k3bttQe2l6RskhcMCA-pOniIGHcxug&s",
+      "id": "4cbc"
     }
   ],
-  "categorias": []
+  "categorias": [
+    {
+      "id": "1",
+      "nome": "Saúde e Higiene"
+    },
+    {
+      "id": "2",
+      "nome": "Alimentos"
+    },
+    {
+      "id": "3",
+      "nome": "Limpeza"
+    }
+  ]
 }
