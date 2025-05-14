@@ -40,10 +40,10 @@ const VerificaCPF = () => {
     >
       <Form
         onSubmit={handleSubmit}
-        className="p-4 border rounded bg-light shadow"
+        className="p-4 border rounded bg-light shadow w-100 text-center"
         style={{ width: "100%", maxWidth: 400 }}
       >
-        <Form.Group controlId="formCPF">
+        <Form.Group controlId="formCPF" >
           <Form.Label>Verificação de CPF</Form.Label>
           <Form.Control
             size="lg"
